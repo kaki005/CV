@@ -1,0 +1,75 @@
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{%
+  margin=12.5mm,
+  headsep=0mm,
+  headheight=0mm,
+  footskip=5mm,
+  includehead=true,
+  includefoot=true
+}
+
+% Custom colors
+\definecolor{mediumgray}{gray}{0.5}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{mediumblue}{HTML}{2060c2}
+\definecolor{lightblue}{HTML}{a0c3ff}
+
+\setlength\parindent{0cm}% No indentation
+
+
+\renewcommand{\baselinestretch}{1.1}% Increase the line spacing
+\renewcommand{\arraystretch}{1.25}% and the spacing between rows in tables
+
+% Remove space between items in itemize and enumerate
+\setlist{nosep}
+
+% Set the spacing and format of sections
+\titleformat{\section}
+  {\normalfont\Large\mdseries} % format
+  {} % label
+  {0pt} % separation (left separation for hang)
+  {} % text before title
+  [\titlerule] % text after title
+\titlespacing*{\section}
+  {0pt} % left pad
+  {0.1cm} % before
+  {0cm} % after
+
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+
+% Configure a fancy footer
+\newcommand{\Separator}{\hspace{3pt}|\hspace{3pt}}
+\newcommand{\FooterFont}{\footnotesize\color{mediumgray}}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{%
+  \FooterFont{}
+  \MyName{}
+  \Separator{}
+  \Title{}
+}
+\rfoot{%
+  \FooterFont{}
+  Last updated: \monthyear\today{}
+  \Separator{}
+  \thepage\space of\space \pageref*{LastPage}
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+\preto{\footrule}{\color{lightgray}}
+
+% Metadata for the PDF output and control of hyperlinks
+\hypersetup{
+  colorlinks,
+  allcolors=mediumblue,
+  breaklinks=true,
+  pdftitle={\Title{} - \MyName},
+  pdfauthor={\MyName},
+}
