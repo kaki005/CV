@@ -3,7 +3,8 @@
 These are the LaTeX sources for my academic CV.
 
 **Download** the latest compiled PDF:
-[cv.pdf](https://github.com/kaki005/cv/raw/pdf/cv.pdf)
+[🇺🇸 English](https://github.com/kaki005/CV/cv_en.pdf)
+[🇯🇵 Japanese](https://github.com/kaki005/CV/cv_ja.pdf)
 
 ## Template
 
