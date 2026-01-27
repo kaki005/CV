@@ -1,0 +1,46 @@
+% Header
+\begin{minipage}[t]{0.5\textwidth}
+  {\fontsize{20pt}{0}\selectfont\MyName}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+  \begin{flushright}
+    \Title{}
+  \end{flushright}
+\end{minipage}
+\\[-0.1cm]
+\textcolor{lightgray}{\rule{\textwidth}{3pt}}
+\vspace{-1.0em}
+
+
+
+\begin{figure}[h]
+    \begin{tabular}{cc}
+      \begin{minipage}[h]{0.5\textwidth}
+        \vspace{-1.2em}
+          \begin{tabular}[t]{ll}
+            \faMapMarker* \switch{Address}{住所} & \Affiliation \\[-0.35em]
+            & \Address \\[-0.35em]
+            \faEnvelope\ \switch{Email}{メール} & \href{mailto:\Email}{\Email} (\switch{please replace [at] with @.}{[at]を@で置き換えてください．})\\[-0.35em]
+            \faUniversity\ \switch{University}{大学} & \href{www.osaka-u.ac.jp}{\OU} \\[-0.35em]
+            \faLaptopCode\ \switch{Laboratory}{研究室} & \Website{\LabWebsite} \\[-0.35em]
+            % \textbf{Website} & \Website{\PersonalWebsite} \\[-0.35em]
+            \switch{Links}{リンク} &  \faLinkedin{} \href{https://www.linkedin.com/in/\Linkedin}{Linkedin}
+                              \Separator{}
+                              \faGithub{} \href{https://github.com/\GitHubProfile}{GitHub}
+                              \Separator{}
+                              \raisebox{-0.15em}{\includegraphics[height=1em, width=1em]{fig/arxiv.pdf}}\ \href{https://arxiv.org/search/cs?searchtype=author&query=Kakio,S}{Arxiv}
+                              \Separator{}
+                              \faOrcid{} \href{https://orcid.org/\ORCID}{ORCID}
+
+            \vspace{0.2em}
+
+          \end{tabular}
+      \end{minipage} &
+      \hspace{5.0em}
+      \begin{minipage}[h]{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.3\linewidth]{./fig/profile.pdf}
+      \end{minipage}
+    \end{tabular}
+\end{figure}
+\vspace{-1.5em}

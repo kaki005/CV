@@ -1,5 +1,7 @@
 % Load packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox} % 条件分岐用パッケージ
+\newif\ifjp % 日本語か
 
 % Full Unicode support for non-ASCII characters
 \usepackage[utf8]{inputenc}
@@ -12,7 +14,7 @@
 
 % Icon fonts
 \usepackage{fontawesome5}
-\usepackage{academicons}
+% \usepackage{academicons}
 
 % Disable hyphenation
 \usepackage[none]{hyphenat}
@@ -28,7 +30,7 @@
 \usepackage{environ}
 
 % Manage dates and times
-\usepackage{datetime}
+\usepackage[useregional]{datetime2}
 
 % Set the page margins
 \usepackage{geometry}
@@ -52,3 +54,4 @@
 \usepackage[colorlinks=true]{hyperref}
 
 \usepackage{graphicx}
+\usepackage{tikz}
