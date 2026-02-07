@@ -1,7 +1,9 @@
+\newcounter{conference} % 国際会議のカウンタ
+\renewcommand{\theconference}{C\arabic{conference}} % 今の文献番号を表示する C1, C2, ...
 % 英語
 \jpfalse % 英語に切り替え
 \begin{EntriesTablePublications}
-  [C1] &
+  \refstepcounter{conference}[\theconference]\label{HeteroComp} &
   \Me, \YMatsubara, \RFujiwara, and \YSakurai.
   \textbf{Multi-Aspect Mining and Anomaly Detection for Heterogeneous Tensor Streams}.
   Proceedings of the ACM Web Conference 2026 (\textbf{WWW '26}), April 13--17, 2026, Dubai, United Arab Emirates. Acceptance rate: 20.1\%. \DOI{110.1145/3774904.3792175}.
