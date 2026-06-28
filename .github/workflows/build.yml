@@ -22,30 +22,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup caching for tectonic
-        uses: actions/cache@v5
-        with:
-          path: ~/.cache/Tectonic
-          key: tectonic-${{ runner.os }}
-
       - name: Install fonts
         run: |
           sudo apt install -y fonts-noto-cjk
 
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3.3.0
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
         with:
-          environment-file: environment.yml
-          activate-environment: cv
-          miniforge-version: "latest"
-          use-mamba: true
+          root_file: cv_ja.tex
+          compiler: lualatex
 
-      - name: List installed packages
-        run: mamba list
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv_en.tex
+          compiler: lualatex
 
       - name: Compile the PDF
         run: |
-          make
           mkdir output
           cp *.pdf output/
 
