@@ -11,7 +11,7 @@ PDF = $(patsubst %.tex,%.pdf,$(TEX))
 all: $(PDF)
 
 %.pdf: %.tex $(SUBTEX)
-	tectonic -X compile $<
+	luatex $<
 
 show: $(PDF)
 	xdg-open $<
