@@ -26,14 +26,14 @@ jobs:
         run: |
           sudo apt install -y fonts-noto-cjk
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
+      - name: Compile cv_ja.tex
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: cv_ja.tex
           compiler: lualatex
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
+      - name: Compile cv_en.tex
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: cv_en.tex
           compiler: lualatex
